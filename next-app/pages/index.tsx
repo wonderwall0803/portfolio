@@ -35,13 +35,15 @@ const Home: NextPageWithLayout = () => {
                 </Link>
               </li>
               <li>
-                <figure>
-                  <Image src="/images/common/sample.jpg" alt="サンプル画像" width={300} height={300} />
-                </figure>
-                <div css={worksDesc}>
-                  <h3>タイトルタイトル</h3>
-                  <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                </div>
+                <Link href="/works/02" scroll={false}>
+                  <figure>
+                    <Image src="/images/common/sample.jpg" alt="サンプル画像" width={300} height={300} />
+                  </figure>
+                  <div css={worksDesc}>
+                    <h3>タイトルタイトル</h3>
+                    <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                  </div>
+                </Link>
               </li>
               <li>
                 <figure>
@@ -82,7 +84,7 @@ const works = css`
   ${media.pc} {
     padding-top: 80px;
     h2 {
-      font-size: ${rem(38)};
+      font-size: ${rem(48)};
       text-align: center;
     }
   }

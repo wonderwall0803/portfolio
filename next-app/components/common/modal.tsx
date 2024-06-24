@@ -8,15 +8,24 @@ import { usePageContext } from 'context/pageContext';
 const Modal = () => {
   const pageContext = usePageContext();
   const {isModalOpen, setIsModalOpen} = pageContext;
-  const ref = useRef(null);
+  const refBg = useRef(null);
+  const refContents = useRef(null);
   useEffect(() => {
     if (isModalOpen) {
-      gsap.to(ref.current, {
+      gsap.to(refBg.current, {
+        autoAlpha: 1,
+        duration: 0.5
+      });
+      gsap.to(refContents.current, {
         autoAlpha: 1,
         duration: 0.5
       });
     } else {
-      gsap.to(ref.current, {
+      gsap.to(refBg.current, {
+        autoAlpha: 0,
+        duration: 0.5
+      });
+      gsap.to(refContents.current, {
         autoAlpha: 0,
         duration: 0.5
       });
@@ -24,9 +33,9 @@ const Modal = () => {
   }, [isModalOpen]);
 
   return (
-    <div ref={ref}>
-      <div css={bg} className='modalBg' onClick={() => setIsModalOpen(false)} />
-      <div css={content} className='modalContent'>
+    <div>
+      <div ref={refBg} css={bg} className='modalBg' onClick={() => setIsModalOpen(false)} />
+      <div ref={refContents} css={content} className='modalContent'>
         <div css={contentInner}>
           <button css={btn} onClick={() => setIsModalOpen(false)} />
           <figure>
@@ -50,7 +59,7 @@ const bg = css`
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   position: fixed;
   top: 0;
   left: 0;
