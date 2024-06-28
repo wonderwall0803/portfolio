@@ -37,30 +37,27 @@ const Home: NextPageWithLayout = () => {
               <li>
                 <Link href="/works/02" scroll={false}>
                   <figure>
-                    <Image src="/images/common/sample.jpg" alt="サンプル画像" width={300} height={300} />
+                    <Image src="/images/index/national-center-img.jpg" alt="国立アートリサーチセンター" width={300} height={300} />
                   </figure>
                   <div css={worksDesc}>
-                    <h3>タイトルタイトル</h3>
-                    <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                    <h3>国立アートリサーチセンター</h3>
                   </div>
                 </Link>
               </li>
               <li>
                 <figure>
-                  <Image src="/images/common/sample.jpg" alt="サンプル画像" width={300} height={300} />
+                  <Image src="/images/index/edua-img.jpg" alt="朝日新聞EduA" width={300} height={300} />
                 </figure>
                 <div css={worksDesc}>
-                  <h3>タイトルタイトル</h3>
-                  <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                  <h3>朝日新聞EduA</h3>
                 </div>
               </li>
               <li>
                 <figure>
-                  <Image src="/images/common/sample.jpg" alt="サンプル画像" width={300} height={300} />
+                  <Image src="/images/index/matel-games-img.jpg" alt="Mattel Games" width={300} height={300} />
                 </figure>
                 <div css={worksDesc}>
-                  <h3>タイトルタイトル</h3>
-                  <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                  <h3>Mattel Games</h3>
                 </div>
               </li>
             </ul>

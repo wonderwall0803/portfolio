@@ -16,15 +16,15 @@ const Index: NextPageWithLayout = (props: any) => {
         <div className='contents-detail'>
           <div css={row}>
             <figure css={fig}>
-              <Image src="/images/index/questionnaire-site-img.jpg" alt="アンケート調査サイト" width={300} height={300} />
+              <Image src="/images/index/national-center-img.jpg" alt="国立アートリサーチセンター" width={300} height={300} />
               <figcaption>
                 <blockquote>
-                  <p><cite>出典：<a href="https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/" target="_blank" rel="noreferrer">中学生・高校生の生活と意識調査｜NHK放送文化研究所</a></cite></p>
+                  <p><cite>出典：<a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer">国立アートリサーチセンター</a></cite></p>
                 </blockquote>
               </figcaption>
             </figure>
             <div css={desc}>
-              <h2>アンケート調査サイト</h2>
+              <h2>国立アートリサーチセンター</h2>
               <dl>
                 <dt>
                   サイト概要
