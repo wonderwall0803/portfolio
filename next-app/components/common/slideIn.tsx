@@ -56,7 +56,8 @@ const mask = css`
   left: -5%;
   width: 0;
   height: 100%;
-  background: #FF4F4F;
+  /* background: #FF4F4F; */
+  background: #283130;
   transform: skew(-20deg, 0);
   z-index: 1;
 `

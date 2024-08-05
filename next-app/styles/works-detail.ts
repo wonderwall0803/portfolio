@@ -11,11 +11,14 @@ export const row = css`
 export const fig = css`
   ${media.pc} {
     width: 400px;
-    border-radius: 30px 0 30px 0;
-    overflow: hidden;
     figcaption {
       margin-top: 10px;
       font-size: ${rem(12)};
+    }
+    img {
+      border-radius: 30px 0 30px 0;
+      overflow: hidden;
+      border: 1px solid #ccc;
     }
   }
   ${media.sp} {

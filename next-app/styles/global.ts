@@ -10,7 +10,7 @@ export const normalize = css`
     font-weight: 400;
     letter-spacing: 0.08em;
     color: #283130;
-    background-color: #9ACBC2;
+    /* background-color: #9ACBC2; */
   }
   html {
     scroll-behavior: smooth;

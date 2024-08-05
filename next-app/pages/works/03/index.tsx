@@ -16,22 +16,21 @@ const Index: NextPageWithLayout = (props: any) => {
         <div className='contents-detail'>
           <div css={row}>
             <figure css={fig}>
-              <Image src="/images/index/national-center-img.jpg" alt="国立アートリサーチセンター" width={300} height={300} />
+              <Image src="/images/index/edua-img.jpg" alt="朝日新聞EduA（エデュア）" width={300} height={300} />
               <figcaption>
                 <blockquote>
-                  <p><cite>出典：<a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer">国立アートリサーチセンター</a></cite></p>
+                  <p><cite>出典：<a href="https://www.asahi.com/edua/" target="_blank" rel="noreferrer">朝日新聞EduA（エデュア）</a></cite></p>
                 </blockquote>
               </figcaption>
             </figure>
             <div css={desc}>
-              <h2>国立アートリサーチセンター</h2>
+              <h2>朝日新聞EduA（エデュア）</h2>
               <dl>
                 <dt>
                   サイト概要
                 </dt>
                 <dd>
-                  アートに関する情報を発信するとともに、アート振興の新たな拠点としての活動内容をまとめたサイトです。<br />
-                  CMS(movable type)で構築しており、記事更新はCMSから行えるように実装しております。
+                  子供を持つ保護者向けの、学習や教育に関する情報を発信するメディアサイトです。
                 </dd>
               </dl>
               <dl>
@@ -47,8 +46,7 @@ const Index: NextPageWithLayout = (props: any) => {
                   ポイント
                 </dt>
                 <dd>
-                  どのようなユーザーに対しても使いやすくなるようWebアクセシビリティに準拠した作りとなっております。<br />
-                  サイト全体の雰囲気に合わせて、柔らかな印象を与える演出を随所に施しております。
+                  記事のレイアウトパターンが多かったので、長文/短文のテキスト、大/小の画像、どのようなパターンでもレイアウトが崩れないよう注意してスタイルを調整しました。
                 </dd>
               </dl>
               <dl>
@@ -56,7 +54,7 @@ const Index: NextPageWithLayout = (props: any) => {
                   URL
                 </dt>
                 <dd>
-                  <a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer">https://ncar.artmuseums.go.jp/</a>
+                  <a href="https://www.asahi.com/edua/" target="_blank" rel="noreferrer">https://www.asahi.com/edua/</a>
                 </dd>
               </dl>
             </div>

@@ -96,7 +96,8 @@ const Bg = css`
   position: fixed;
   width: 100%;
   height: calc(100vh / 3);
-  background-color: #FF4F4F;
+  /* background-color: #FF4F4F; */
+  background-color: #283130;
   z-index: 100;
 `
 const arrive = css`
