@@ -9,7 +9,10 @@ const Mv = (props: any) => {
       <section css={mv}>
         <h2 css={copy}>
           <SlideIn type="block">
-            <Image src="/images/index/catchphrase.svg" alt="Don't Stop Evolution" width={200} height={300} />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/index/catchphrase-sp.svg" />
+              <img src="/images/index/catchphrase.svg" alt="Don't Stop Evolution" width={200} height={300} />
+            </picture>
           </SlideIn>
         </h2>
         <div css={desc}>
@@ -43,12 +46,19 @@ const mv = css`
   }
 `
 const copy = css`
-  width: 100%;
-  img {
-    width: 100%;
-  }
   ${media.pc} {
     margin: 100px 0 50px;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  ${media.sp} {
+    margin: ${vw(100)} 0 ${vw(40)};
+    width: 80%;
+    img {
+      width: 100%;
+    }
   }
 `
 const desc = css`

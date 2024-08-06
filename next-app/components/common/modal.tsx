@@ -67,33 +67,65 @@ const bg = css`
   z-index: 10;
 `
 const content = css`
-  width: 80%;
-  max-width: 900px;
-  background-color: #fff;
-  border-radius: 5px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-  figure {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+  ${media.pc} {
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    figure {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  ${media.sp} {
+    width: 80%;
+    background-color: #fff;
+    border-radius: ${vw(5)};
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    figure {
+      width: ${vw(100)};
+      height: ${vw(100)};
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 `
 const contentInner = css`
-  padding: 60px 40px;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  ${media.pc} {
+    padding: 60px 40px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  ${media.sp} {
+    padding: ${vw(30)} ${vw(20)};
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 `
 const btn = css`
   width: 40px;
@@ -120,18 +152,38 @@ const btn = css`
   }
 `
 const desc = css`
-  width: calc(100% - 200px);
-  padding-left: 30px;
-  box-sizing: border-box;
-  h2 {
-    font-size: ${rem(30)};
-    font-weight: 700;
-    margin-bottom: 40px;
-    font-style: italic;
+  ${media.pc} {
+    width: calc(100% - 200px);
+    padding-left: 30px;
+    box-sizing: border-box;
+    h2 {
+      font-size: ${rem(30)};
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+    p {
+      font-size: ${rem(16)};
+      line-height: 1.8;
+    }
   }
-  p {
-    font-size: ${rem(16)};
-    line-height: 1.8;
+  ${media.sp} {
+    width: 100%;
+    display: contents;
+    h2 {
+      font-size: ${vw(18)};
+      font-weight: 700;
+      font-style: italic;
+      width: ${vw(170)};
+      padding-left: ${vw(15)};
+      box-sizing: border-box;
+      line-height: 1.5;
+    }
+    p {
+      font-size: ${rem(14)};
+      line-height: 1.8;
+      margin-top: ${vw(20)};
+    }
   }
 
 `

@@ -22,10 +22,16 @@ export const fig = css`
     }
   }
   ${media.sp} {
-    width: ${vw(300)};
-  }
-  ${media.tb} {
-    width: ${vwTb(300)};
+    width: 100%;
+    figcaption {
+      margin-top: ${vw(10)};
+      font-size: ${vw(13)};
+    }
+    img {
+      border-radius: ${vw(30)} 0 ${vw(30)} 0;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
   }
 `
 export const desc = css`
@@ -63,6 +69,41 @@ export const desc = css`
       }
     }
   }
+  ${media.sp} {
+    width: 100%;
+    margin-top: ${vw(30)};
+    h2 {
+      font-size: ${vw(26)};
+      margin-bottom: 30px;
+    }
+    dl {
+      dt {
+        font-size: ${vw(18)};
+        font-weight: bold;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 15px;
+        &:before {
+          content: "";
+          width: ${vw(5)};
+          height: ${vw(20)};
+          background-color: #FF4F4F;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+      dd {
+        font-size: ${vw(16)};
+        margin-bottom: ${vw(20)};
+        line-height: 1.8;
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 `
 export const btn = css`
   ${media.pc} {
@@ -81,6 +122,30 @@ export const btn = css`
       content: "";
       width: 8px;
       height: 8px;
+      border-right: 2px #283130 solid;
+      border-bottom: 2px #283130 solid;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+  ${media.sp} {
+    width: ${vw(230)};
+    height: ${vw(30)};
+    font-size: ${vw(18)};
+    font-weight: bold;
+    color: #283130;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: ${vw(50)} 0 0 auto;
+    border-radius: ${vw(10)};
+    position: relative;
+    &:after {
+      content: "";
+      width: ${vw(8)};
+      height: ${vw(8)};
       border-right: 2px #283130 solid;
       border-bottom: 2px #283130 solid;
       position: absolute;

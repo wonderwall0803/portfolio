@@ -243,6 +243,9 @@ export const style = css`
     }
   }
   ${media.sp} {
+    html {
+      scroll-padding-top: ${vw(90)};
+    }
     .contents {
       width: 90%;
       margin: 0 auto;

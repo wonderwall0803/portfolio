@@ -111,11 +111,19 @@ const works = css`
       text-align: center;
     }
   }
+  ${media.sp} {
+    padding-top: ${vw(70)};
+    h2 {
+      font-size: ${vw(40)};
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+  }
 `
 const worksList = css`
-  display: grid;
-  gap: 20px;
   ${media.pc} {
+    display: grid;
+    gap: 20px;
     margin-top: 50px;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -124,32 +132,47 @@ const worksList = css`
         transform: scale(1.1);
       }
     }
-  }
-  ${media.sp} {
-    margin-top: ${vw(30)};
-    grid-template-columns: repeat(2, 1fr);
-    gap: ${vw(20)};
-  }
-  figure {
-    width: 100%;
-    height: 200px;
-    border-radius: 30px 0 30px 0;
-    border: 1px solid #ccc;
-    overflow: hidden;
-    img {
+    figure {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
+      height: 200px;
+      border-radius: 30px 0 30px 0;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
     }
   }
+  ${media.sp} {
+    margin-top: ${vw(40)};
+    grid-template-columns: repeat(2, 1fr);
+    gap: ${vw(20)};
+    display: grid;
+    figure {
+      width: 100%;
+      height: ${vw(110)};
+      border-radius: ${vw(30)} 0 ${vw(30)} 0;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+  
 `
 const worksDesc = css`
   ${media.pc} {
     margin-top: 20px;
   }
   ${media.sp} {
-    margin-top: ${vw(20)};
+    margin-top: ${vw(10)};
   }
   h3 {
     ${media.pc} {
@@ -157,7 +180,8 @@ const worksDesc = css`
       margin-bottom: 10px;
     }
     ${media.sp} {
-      font-size: ${vw(24)};
+      font-size: ${vw(18)};
+      line-height: 1.6;
       margin-bottom: ${vw(10)};
     }
   }
@@ -202,6 +226,41 @@ const skill = css`
       }
       dd {
         font-size: ${rem(20)};
+      }
+    }
+  }
+  ${media.sp} {
+    padding-top: ${vw(70)};
+    h2 {
+      font-size: ${vw(40)};
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .skill-area {
+      margin-top: ${vw(40)};
+    }
+    .skill-block {
+      margin-bottom: ${vw(40)};
+      dt {
+        font-size: ${vw(22)};
+        font-weight: bold;
+        margin-bottom: ${vw(10)};
+        position: relative;
+        padding-left: ${vw(15)};
+        &:before {
+          content: "";
+          width: ${vw(5)};
+          height: ${vw(20)};
+          background-color: #FF4F4F;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+      dd {
+        font-size: ${vw(18)};
+        line-height: 1.8;
       }
     }
   }
