@@ -5,17 +5,22 @@ import { css } from "@emotion/react";
 const Footer = (props: any) => {
   return (
     <footer css={wrap}>
-      <h2>footer</h2>
+      <div className='contents'>
+        <p>&copy; Tatsuhiko Mashiyama</p>
+      </div>
     </footer>
   )
 }
 
 const wrap = css`
   width: 100%;
-  background-color: #dadada;
+  border-top: 1px #dadada solid;
   box-sizing: border-box;
+  .contents {
+    padding: 0;
+  }
   ${media.pc} {
-    padding: 14px 20px;
+    padding: 20px 0;
     h2 {
       font-size: ${rem(18)};
     }

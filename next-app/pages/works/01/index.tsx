@@ -19,7 +19,7 @@ const Index: NextPageWithLayout = (props: any) => {
               <Image src="/images/index/questionnaire-site-img.jpg" alt="アンケート調査サイト" width={300} height={300} />
               <figcaption>
                 <blockquote>
-                  <p><cite>出典：<a href="https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/" target="_blank" rel="noreferrer">中学生・高校生の生活と意識調査｜NHK放送文化研究所</a></cite></p>
+                  <p><cite>出典：<a href="https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/" target="_blank" rel="noreferrer" className='link-text'>中学生・高校生の生活と意識調査｜NHK放送文化研究所</a></cite></p>
                 </blockquote>
               </figcaption>
             </figure>
@@ -54,12 +54,12 @@ const Index: NextPageWithLayout = (props: any) => {
                   URL
                 </dt>
                 <dd>
-                  <a href="https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/" target="_blank" rel="noreferrer">https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/</a>
+                  <a href="https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/" target="_blank" rel="noreferrer" className='link-alpha'>https://www.nhk.or.jp/bunken/yoron-isiki/tyuko/</a>
                 </dd>
               </dl>
             </div>
           </div>
-          <Link href="/" scroll={false} css={btn}>トップページへ</Link>
+          <Link href="/" scroll={false} css={btn} className='link-alpha'>トップページへ</Link>
         </div>
       </main>
     </>

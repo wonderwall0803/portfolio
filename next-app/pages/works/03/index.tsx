@@ -19,7 +19,7 @@ const Index: NextPageWithLayout = (props: any) => {
               <Image src="/images/index/edua-img.jpg" alt="朝日新聞EduA（エデュア）" width={300} height={300} />
               <figcaption>
                 <blockquote>
-                  <p><cite>出典：<a href="https://www.asahi.com/edua/" target="_blank" rel="noreferrer">朝日新聞EduA（エデュア）</a></cite></p>
+                  <p><cite>出典：<a href="https://www.asahi.com/edua/" target="_blank" rel="noreferrer" className='link-text'>朝日新聞EduA（エデュア）</a></cite></p>
                 </blockquote>
               </figcaption>
             </figure>
@@ -54,12 +54,12 @@ const Index: NextPageWithLayout = (props: any) => {
                   URL
                 </dt>
                 <dd>
-                  <a href="https://www.asahi.com/edua/" target="_blank" rel="noreferrer">https://www.asahi.com/edua/</a>
+                  <a href="https://www.asahi.com/edua/" target="_blank" rel="noreferrer" className='link-alpha'>https://www.asahi.com/edua/</a>
                 </dd>
               </dl>
             </div>
           </div>
-          <Link href="/" scroll={false} css={btn}>トップページへ</Link>
+          <Link href="/" scroll={false} css={btn} className='link-alpha'>トップページへ</Link>
         </div>
       </main>
     </>

@@ -10,7 +10,7 @@ export const normalize = css`
     font-weight: 400;
     letter-spacing: 0.08em;
     color: #283130;
-    /* background-color: #9ACBC2; */
+    overflow-x: clip;
   }
   html {
     scroll-behavior: smooth;
@@ -211,8 +211,46 @@ export const style = css`
       max-width: 1000px;
       margin: 130px auto 50px;
     }
+    .link-text {
+      cursor: pointer;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: currentColor;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform-origin: right center;
+        transform: scale(0, 1);
+        transition: transform 0.3s ease;
+      }
+      &:hover {
+        &:before {
+          transform-origin: left center;
+          transform: scale(1, 1);
+        }
+      }
+    }
+    .link-alpha {
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
   ${media.sp} {
-
+    .contents {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: ${vw(100)};
+    }
+    .contents-detail {
+      width: 90%;
+      margin: ${vw(130)} auto ${vw(50)};
+    }
   }
 `

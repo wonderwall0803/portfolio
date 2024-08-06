@@ -19,7 +19,7 @@ const Index: NextPageWithLayout = (props: any) => {
               <Image src="/images/index/matel-games-img.jpg" alt="Mattel Games マテル ゲーム" width={300} height={300} />
               <figcaption>
                 <blockquote>
-                  <p><cite>出典：<a href="https://mattel.co.jp/toys/mattel_games/" target="_blank" rel="noreferrer">Mattel Games マテル ゲーム</a></cite></p>
+                  <p><cite>出典：<a href="https://mattel.co.jp/toys/mattel_games/" target="_blank" rel="noreferrer" className='link-text'>Mattel Games マテル ゲーム</a></cite></p>
                 </blockquote>
               </figcaption>
             </figure>
@@ -46,7 +46,7 @@ const Index: NextPageWithLayout = (props: any) => {
                   ポイント
                 </dt>
                 <dd>
-                  お馴染みのカードゲームということで、メインビジュアルには重なったカードが切り替わるような演出を施してみました。こちらは演出イメージに合ったライブラリがなかったため自作で実装しました。
+                  お馴染みのカードゲームということで、メインビジュアルには重なったカードが切り替わるような演出を施してみました。こちらは演出のイメージに合ったライブラリがなかったため自作で実装しました。
                 </dd>
               </dl>
               <dl>
@@ -54,12 +54,12 @@ const Index: NextPageWithLayout = (props: any) => {
                   URL
                 </dt>
                 <dd>
-                  <a href="https://mattel.co.jp/toys/mattel_games/" target="_blank" rel="noreferrer">https://mattel.co.jp/toys/mattel_games/</a>
+                  <a href="https://mattel.co.jp/toys/mattel_games/" target="_blank" rel="noreferrer" className='link-alpha'>https://mattel.co.jp/toys/mattel_games/</a>
                 </dd>
               </dl>
             </div>
           </div>
-          <Link href="/" scroll={false} css={btn}>トップページへ</Link>
+          <Link href="/" scroll={false} css={btn} className='link-alpha'>トップページへ</Link>
         </div>
       </main>
     </>

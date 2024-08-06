@@ -5,6 +5,7 @@ import { Global } from '@emotion/react'
 import { normalize, style } from 'styles/global'
 import MotionWrapper from 'components/common/motionWrapper'
 import Header from 'components/common/header';
+import Footer from 'components/common/footer';
 import Modal from 'components/common/modal'
 import { PageWrapper } from 'context/pageContext'
 
@@ -28,6 +29,7 @@ export default function MyApp({ Component, pageProps, router }: AppPropsWithLayo
             <Modal />
             <Header />
             <Component {...pageProps} />
+            <Footer />
           </PageWrapper>
         </MotionWrapper>
       </>

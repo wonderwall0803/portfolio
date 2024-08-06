@@ -32,10 +32,15 @@ const Mv = (props: any) => {
 }
 
 const mv = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
+  ${media.pc} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+  ${media.sp} {
+    margin-top: ${vw(140)};
+  }
 `
 const copy = css`
   width: 100%;

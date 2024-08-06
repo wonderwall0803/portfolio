@@ -19,7 +19,7 @@ const Index: NextPageWithLayout = (props: any) => {
               <Image src="/images/index/national-center-img.jpg" alt="国立アートリサーチセンター" width={300} height={300} />
               <figcaption>
                 <blockquote>
-                  <p><cite>出典：<a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer">国立アートリサーチセンター</a></cite></p>
+                  <p><cite>出典：<a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer" className='link-text'>国立アートリサーチセンター</a></cite></p>
                 </blockquote>
               </figcaption>
             </figure>
@@ -56,12 +56,12 @@ const Index: NextPageWithLayout = (props: any) => {
                   URL
                 </dt>
                 <dd>
-                  <a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer">https://ncar.artmuseums.go.jp/</a>
+                  <a href="https://ncar.artmuseums.go.jp/" target="_blank" rel="noreferrer" className='link-alpha'>https://ncar.artmuseums.go.jp/</a>
                 </dd>
               </dl>
             </div>
           </div>
-          <Link href="/" scroll={false} css={btn}>トップページへ</Link>
+          <Link href="/" scroll={false} css={btn} className='link-alpha'>トップページへ</Link>
         </div>
       </main>
     </>

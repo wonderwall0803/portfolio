@@ -21,6 +21,27 @@ const Home: NextPageWithLayout = () => {
       <main>
         <div className='contents'>
           <Mv />
+          <section css={skill} id="skill">
+            <h2>SKILL</h2>
+            <div className="skill-area">
+              <dl className="skill-block">
+                <dt>言語</dt>
+                <dd>JavaScript / HTML / CSS / PHP / Java</dd>
+              </dl>
+              <dl className="skill-block">
+                <dt>フレームワーク・ライブラリ</dt>
+                <dd>React / Next.js / Astro / jQuery / Pixi.js / CakePHP3</dd>
+              </dl>
+              <dl className="skill-block">
+                <dt>開発環境</dt>
+                <dd>VScode / WebPack / Sass / postCSS / Emotion</dd>
+              </dl>
+              <dl className="skill-block">
+                <dt>その他</dt>
+                <dd>Git / Vercel / microCMS</dd>
+              </dl>
+            </div>
+          </section>
           <section css={works} id="works">
             <h2>WORKS</h2>
             <ul css={worksList}>
@@ -85,7 +106,8 @@ const works = css`
   ${media.pc} {
     padding-top: 80px;
     h2 {
-      font-size: ${rem(48)};
+      font-size: ${rem(58)};
+      letter-spacing: 0.08em;
       text-align: center;
     }
   }
@@ -97,6 +119,11 @@ const worksList = css`
     margin-top: 50px;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    li a {
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
   }
   ${media.sp} {
     margin-top: ${vw(30)};
@@ -113,6 +140,7 @@ const worksList = css`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.3s ease;
     }
   }
 `
@@ -139,6 +167,42 @@ const worksDesc = css`
     }
     ${media.sp} {
       font-size: ${vw(16)};
+    }
+  }
+`
+const skill = css`
+  ${media.pc} {
+    padding-top: 80px;
+    h2 {
+      font-size: ${rem(58)};
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .skill-area {
+      margin-top: 50px;
+    }
+    .skill-block {
+      margin-bottom: 40px;
+      dt {
+        font-size: ${rem(24)};
+        font-weight: bold;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 15px;
+        &:before {
+          content: "";
+          width: 5px;
+          height: 20px;
+          background-color: #FF4F4F;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+      dd {
+        font-size: ${rem(20)};
+      }
     }
   }
 `

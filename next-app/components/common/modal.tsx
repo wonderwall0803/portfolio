@@ -39,14 +39,15 @@ const Modal = () => {
         <div css={contentInner}>
           <button css={btn} onClick={() => setIsModalOpen(false)} />
           <figure>
-            <Image src="/images/common/sample.jpg" alt="サンプル画像" width={300} height={300} />
+            <Image src="/images/common/mashiyama-img.jpg" alt="本人画像" width={300} height={300} />
           </figure>
           <div css={desc}>
-            <h2>名前name</h2>
+            <h2>増山 達彦 / Mashiyama Tatsuhiko</h2>
             <p>
-              サンプルテキストサンプルテキストサンプルテキストサンプルテキスト<br />
-              サンプルテキストサンプルテキスト<br />
-              サンプルテキストサンプルテキストテキスト<br />
+              情報系大学で情報処理を学んだ後、都内の独立系SIer企業にて6年間SEとして様々な常駐先で開発業務に従事。
+              その間に上流工程から下流工程までを経験。主に改修要件の設計及び実装を担当。<br />
+              2019年から現在まで栃木県のWeb制作会社であるカテル株式会社にてWeb制作業務に従事。
+              主にフロントエンドエンジニアとして、HTMLのコーディング及びJavaScriptによるアニメーション演出の実装業務を担当。<br />
             </p>
           </div>
         </div>
@@ -67,9 +68,9 @@ const bg = css`
 `
 const content = css`
   width: 80%;
-  max-width: 800px;
+  max-width: 900px;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 5px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -91,14 +92,14 @@ const contentInner = css`
   padding: 60px 40px;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 `
 const btn = css`
   width: 40px;
   height: 40px;
   position: absolute;
-  top: -40px;
+  top: -50px;
   right: 0;
   cursor: pointer;
   &:before,
@@ -125,7 +126,8 @@ const desc = css`
   h2 {
     font-size: ${rem(30)};
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
   }
   p {
     font-size: ${rem(16)};
