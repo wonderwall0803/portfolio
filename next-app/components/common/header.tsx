@@ -27,6 +27,9 @@ const Header = (props: any) => {
           <li>
             <Link href="/#works">Works</Link>
           </li>
+          <li>
+            <Link href="/#contact">Contact</Link>
+          </li>
         </ul>
       </header>
     </>
@@ -40,8 +43,8 @@ const circle = css`
     display: block;
   }
   ${media.sp} {
-    width: ${vw(70)};
-    height: ${vw(70)};
+    width: ${vw(55)};
+    height: ${vw(55)};
     display: block;
     img {
       display: block;
@@ -106,7 +109,7 @@ const menu = css`
   ${media.sp} {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: ${vw(10)};
     width: calc(100% - ${vw(70)});
     li {

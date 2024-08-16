@@ -83,6 +83,16 @@ const Home: NextPageWithLayout = () => {
               </li>
             </ul>
           </section>
+          <section css={contact} id="contact">
+            <h2>CONTACT</h2>
+            <div className="contact-area">
+              <p>
+                お仕事のご依頼やお問合せがございましたら、<br className="only-pc" />
+                下記メールアドレスまでご連絡お願いいたします。
+              </p>
+              <a className="link-text" href="mailto:wonderwall0803@gmail.com">wonderwall0803@gmail.com</a>
+            </div>
+          </section>
         </div>
       </main>
     </>
@@ -97,7 +107,50 @@ Home.getLayout = function getLayout(page) {
   )
 }
 
-
+const contact = css`
+  ${media.pc} {
+    padding-top: 80px;
+    h2 {
+      font-size: ${rem(58)};
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .contact-area {
+      text-align: center;
+      margin-top: 30px;
+      p {
+        line-height: 1.8;
+      }
+      a {
+        color: #FF4F4F;
+        font-weight: bold;
+        margin-top: 20px;
+        display: inline-block;
+      }
+    }
+  }
+  ${media.sp} {
+    padding-top: ${vw(70)};
+    h2 {
+      font-size: ${vw(40)};
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .contact-area {
+      text-align: center;
+      margin-top: ${vw(30)};
+      p {
+        line-height: 1.8;
+      }
+      a {
+        color: #FF4F4F;
+        font-weight: bold;
+        margin-top: ${vw(20)};
+        display: inline-block;
+      }
+    }
+  }
+`
 const works = css`
   ${media.pc} {
     padding-top: 80px;

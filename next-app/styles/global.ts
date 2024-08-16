@@ -200,6 +200,9 @@ export const normalize = css`
 
 export const style = css`
   ${media.pc} {
+    .only-sp {
+      display: none;
+    }
     .contents {
       width: 80%;
       max-width: 1200px;
@@ -245,6 +248,9 @@ export const style = css`
   ${media.sp} {
     html {
       scroll-padding-top: ${vw(90)};
+    }
+    .only-pc {
+      display: none;
     }
     .contents {
       width: 90%;
