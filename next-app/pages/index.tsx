@@ -14,10 +14,6 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <>
-      <Head>
-        <title>ページタイトル</title>
-        <meta name="description" content="ページのディスクリプション" />
-      </Head>
       <main>
         <div className='contents'>
           <Mv />

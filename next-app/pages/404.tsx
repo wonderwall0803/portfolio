@@ -3,20 +3,18 @@ import Link from 'next/link';
 import Head from 'next/head'
 import { media, vw, vwTb, rem } from 'utils/style-helper';
 import { css } from "@emotion/react";
-import Header from 'components/common/header';
-import Footer from 'components/common/footer';
 
 const Index: NextPageWithLayout = () => {
   return (
     <>
-      <Head>
-        <title>404 Not Found</title>
-        <meta name="description" content="404 Not Found" />
-      </Head>
       <main>
-        <h1>404 Not Found</h1>
-        <p>ページが見つかりません</p>
-        <Link href="/">トップページへ</Link>
+        <div className='contents'>
+          <div css={notfound}>
+            <h1>404 Not Found</h1>
+            <p>ページが見つかりません</p>
+            <Link href="/">トップページへ</Link>
+          </div>
+        </div>
       </main>
     </>
   )
@@ -25,25 +23,35 @@ const Index: NextPageWithLayout = () => {
 Index.getLayout = function getLayout(page) {
   return (
     <>
-      <Header />
       {page}
-      <Footer />
     </>
   )
 }
 
-const fig = css`
+const notfound = css`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   ${media.pc} {
-    width: 300px;
-    margin: 30px auto;
+    h1 {
+      font-size: ${rem(40)};
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: ${rem(28)};
+      margin-bottom: 20px;
+    }
   }
   ${media.sp} {
-    width: ${vw(300)};
-    margin: ${vw(30)} auto;
-  }
-  ${media.tb} {
-    width: ${vwTb(300)};
-    margin: ${vwTb(30)} auto;
+    h1 {
+      font-size: ${vw(40)};
+      margin-bottom: ${vw(30)};
+    }
+    p {
+      font-size: ${vw(28)};
+      margin-bottom: ${vw(20)};
+    }
   }
 `
 

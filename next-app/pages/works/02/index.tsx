@@ -8,10 +8,6 @@ const Index: NextPageWithLayout = (props: any) => {
 
   return (
     <>
-      <Head>
-        <title>セカンドページ</title>
-        <meta name="description" content="セカンドページのディスクリプション" />
-      </Head>
       <main>
         <div className='contents-detail'>
           <div css={row}>
